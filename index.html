@@ -2,43 +2,143 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;800&family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap");
+    </style>
   </head>
   <body>
-    <div class="flex blue">
-      <div class="bg green">
-        <div class="logo-container">
-          <img src="#" class="logo" />
+    <form id="myform" action="" method="">
+      <div class="fullpage">
+        <div class="picside">
+          <div class="logospot">
+            <div class="logocolor"></div>
+            <img src="Hi Surf Co..png" class="logo" />
+            <img src="shaka.png" class="s" />
+          </div>
+          <div class="attribution">
+            <p>
+              Photo by
+              <a href="https://unsplash.com/photos/P5mi93aBddA" target="_blank">
+                Mark Harpur
+              </a>
+              on
+              <a href="https://unsplash.com/" target="_blank"> Unsplash </a>
+            </p>
+          </div>
         </div>
-        <div class="attribution-container">
-          <p>
-            Photo by
-            <a href="#" target="_blank"> Halie West </a>
-            on
-            <a href="#" target="_blank"> Unsplash </a>
-          </p>
-        </div>
-      </div>
-      <div class="content red"></div>
-      <div class="form-cont">
-        <h2>do this</h2>
-        <form>
-          <div class="flex">
-            <div class="input-container">
-              <label for="first-name">first</label>
-              <input
-                type="text"
-                id="first-name"
-                name="first Name"
-                placeholder="first Name"
-                required
-              />
+
+        <div class="formside">
+          <div class="words">
+            <h2 class="hititle">HI SURF CO.</h2>
+            <p class="cont">
+              Hi Surf Company is a seed that we are looking to plant! Sign up to
+              be the first to recive emails on products, watch the progress of
+              growing a company, or contact if you are looking to become a
+              partner!
+            </p>
+          </div>
+
+          <h2 class="sup">Sign up!</h2>
+
+          <div class="nput">
+            <div class="left-three">
+              <div class="inputs">
+                <label for="first_name">First Name</label>
+                <input
+                  type="text"
+                  id="first_name"
+                  name="first_name"
+                  placeholder="First Name"
+                  pattern="[a-z]+"
+                  required
+                />
+              </div>
+
+              <div class="inputs">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
+              </div>
+
+              <div class="inputs ps">
+                <label for="create_password">Create Password</label>
+                <input
+                  type="password"
+                  class="error"
+                  id="create_password"
+                  name="create_password"
+                  placeholder="Create Password"
+                  required
+                />
+                <input
+                  type="checkbox"
+                  id="showpassword"
+                  name="showpassword"
+                  value="on"
+                  onclick="showpw()"
+                />
+                <label for="showpassword" class="sp">Show Password</label>
+              </div>
+              <span class="msg"></span>
+            </div>
+
+            <div class="right-three">
+              <div class="inputs">
+                <label for="last_name">Last Name </label>
+                <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+
+              <div class="inputs">
+                <label for="phone_number">Phone Number</label>
+                <input
+                  type="text"
+                  id="phone_number"
+                  name="phone_number"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+
+              <div class="inputs">
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  type="password"
+                  class="error"
+                  id="confirm_password"
+                  name="confirm_password"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <span class="msg"></span>
+              </div>
             </div>
           </div>
-        </form>
+          <div class="submit">
+            <button id="sub" class="submitb" onclick="invalid()">
+              Create Account
+            </button>
+            <p class="login">
+              Already have an account?
+              <a href="login.html">Log In</a>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </form>
+    <script src="script.js"></script>
   </body>
 </html>
